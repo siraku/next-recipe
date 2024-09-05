@@ -1,4 +1,4 @@
-import Recipes from "@/components/recipe-list";
+import Recipes from "@/components/recipes";
 
 const fetchRecipes = async () => {
   const apiResponse = await fetch("https://dummyjson.com/recipes");
@@ -9,8 +9,9 @@ const fetchRecipes = async () => {
 
 const RecipeList = async () => {
   const recipes = await fetchRecipes();
-
-  return <Recipes />;
+  // console.log(recipes);
+  console.log(recipes.length);
+  return <Recipes recipes={recipes} />;
 };
 
 export default RecipeList;

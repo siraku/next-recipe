@@ -14,12 +14,16 @@ const Recipes = ({ recipes }) => {
     <div>
       {" "}
       <h1>RecipeList aaa</h1>
-      <Card>
-        <CardContent>
-          {" "}
-          <Link href={"/"}> hello recipe </Link>{" "}
-        </CardContent>
-      </Card>
+      {recipes && recipes.length > 0
+        ? recipes.map((recipe) => {
+            <Card>
+              <CardContent>
+                {" "}
+                <Link href={"/"}> hello recipe </Link>{" "}
+              </CardContent>
+            </Card>;
+          })
+        : null}
     </div>
   );
 };
