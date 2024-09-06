@@ -9,8 +9,6 @@ const fetchRecipes = async () => {
 
 const RecipeList = async () => {
   const recipes = await fetchRecipes();
-  // console.log(recipes);
-  console.log(recipes.length);
   return <Recipes recipes={recipes} />;
 };
 
